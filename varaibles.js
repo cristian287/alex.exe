@@ -47,18 +47,21 @@ if (codigodeChat < -1){
 
 
 function continu (){
-   $("#cajadeTexto").on ("click" , function(){
+   let continuar = document.getElementById ("cajadeTexto")
+   continuar.onclick = () => {
+      console.log (codigodeChat)
       codigodeChat ++
       game ()
-   }
-   )}
+   };
+   
+}
 continu()
 
 // variables de inicio de juego
 
 function gamz  (_juego ) {
    //el juego puede estar trucado por que nuynca tengo suerte y siempre pierdo :( asi que si esta en 0 no es mal codigo es que no tengo suerte 
-   let puzle = (Math.round(Math.random()*3)) ;
+   let puzle = (Math.round(Math.random()*5)) ;
    return puzle;
 }
 
@@ -69,9 +72,7 @@ function PrimerDia (valor){
       puntosAC = 1
       hoy ++
       puntodeAcion.textContent = puntosAC
-      document.getElementById("cajadeTexto").onclick = () =>{
-      }
-      $("#cajadeTexto").text  (" tienes " + puntosAC + " de puntos elije un de mis emociones para subirle un punto  (1) felicidad  (2) comida  (3) sed ") ;
+      cajadeTexto.textContent = " tienes " + puntosAC + " de puntos elije un de mis emociones para subirle un punto  (1) felicidad  (2) comida  (3) sed " ;
       comer()
       beber ()
       hablar () 
@@ -84,12 +85,12 @@ function noche (){
    hambre--
    sed --
    puntosAC = 1
-   codigodeChat = 10
+   codigodeChat == 8
    emocion()
-   $("#cajadeTexto").text  (" ya es de noche perdi un punto de cada cosa")
+   cajadeTexto.textContent = " ya es de noche perdi un punto de cada cosa"
    document.getElementById("cajadeTexto").onclick = () =>{
       codigodeChat ++;
-      if((codigodeChat >= 10) && (codigodeChat < 999)){
+      if((codigodeChat > 10) && (codigodeChat < 999)){
          codigodeChat = 8;
          continu()
       }
@@ -101,12 +102,13 @@ function noche (){
 
 //actualizar hud
  function emocion (){
-   $("#felicidadR").text (felicidad + " / 10")
-   $("#sedR").text (sed+ " / 10" )
-   $("#hambreR").text ( hambre + " / 10")
-   $("#puntos").text (puntosAC)
-   $("#hoy").text (hoy)
+   felicidadR.textContent = felicidad + " / 10";
+   sedR.textContent = sed + " / 10";
+   hambreR.textContent = hambre + " / 10";
+   puntodeAcion.textContent = puntosAC
+   estadisticasDia.textContent = hoy
  }
+
 
 
  // modo nocturno 
@@ -148,5 +150,3 @@ function puntajeF (){
    puntos = getElementById ("puntuacion")
    puntos.textContent = " tu puntuacion es: " + mathF
 }
-
-

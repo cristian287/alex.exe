@@ -10,33 +10,31 @@
 
 
 function game (){ 
-if (codigodeChat == 1 ){
-    $("#cajadeTexto").text ("me encanta que sigas las reglas de las teclas ( ͡❛ ͜ʖ͡❛ ) , no es nada en particuar solo no me gusta que me toquen y prefiero tener mi espacio para hablar ... entiende? espacio ʕ•́ᴥ•̀ʔ")
+if (codigodeChat == 0 ){
+    cajadeTexto.textContent = " me encanta que sigas las reglas de las teclas ( ͡❛ ͜ʖ͡❛ ) , no es nada en particuar solo no me gusta que me toquen y prefiero tener mi espacio para hablar ... entiende? espacio ʕ•́ᴥ•̀ʔ" 
 }
 
-if (codigodeChat == 2 ){
-    $("#cajadeTexto").text  (" me encanto mi chiste, pero no creo que este aqui por las risas. o si?  si la respusta es no entoces de todas formas puedes quedarte? no me gusta estar solo... ")
+if (codigodeChat == 1 ){
+    cajadeTexto.textContent = " me encanto mi chiste, pero no creo que este aqui por las risas. o si?  si la respusta es no entoces de todas formas puedes quedarte? no me gusta estar solo... " 
 }
 
 if (codigodeChat == 3 ){
-    $("#cajadeTexto").text  (" genial ( ͡ᵔ ⏥ ͡ᵔ), ya esta todo listo para jugar, lo estas? tendras que vigilar mi  hambre, sed y quiero hablarte de ves en cuando por 10 dias. cada dia que pase perdere un punto de cada emocion ") 
-}
+    cajadeTexto.textContent = " genial ( ͡ᵔ ⏥ ͡ᵔ), ya esta todo listo para jugar, lo estas? tendras que vigilar mi  hambre, sed y quiero hablarte de ves en cuando por 10 dias. cada dia que pase perdere un punto de cada emocion " }
 
 if (codigodeChat == 4 ){
-    $("#cajadeTexto").text  (" pero todos los dias tendras puntos para hablarme, alimentarme o darme algo rico de beber me encantan los PUNTOS...    (っ ͡• ⏥ ͡•)っ🎔 ") 
+    cajadeTexto.textContent = " pero todos los dias tendras puntos para hablarme, alimentarme o darme algo rico de beber me encantan los PUNTOS...    (っ ͡• ⏥ ͡•)っ🎔 " 
 }
 
 
 if (codigodeChat == 5 ){
-    $("#cajadeTexto").text  (" ESTOY TAN EMOCINADO QUE SIENTO QUE VOY A EXPLOTAR ( nota de parche : los de mercadotecnia dicen que alex ya no puede explotar, era peligroso) ") 
-}
+    cajadeTexto.textContent = " ESTOY TAN EMOCINADO QUE SIENTO QUE VOY A EXPLOTAR ( nota de parche : los de mercadotecnia dicen que alex ya no puede explotar, era peligroso) " }
+
 
 if (codigodeChat == 6 ){
-    $("#cajadeTexto").text  ( "bueno bueno, ya me calme el juego esta listo !!! nice. alla vamos ... ") 
-}
+    cajadeTexto.textContent = "bueno bueno, ya me calme el juego esta listo !!! nice. alla vamos ... " }
 
 if (codigodeChat == 7 ){
-    $("#cajadeTexto").text  (" iniciando..")
+    cajadeTexto.textContent = " iniciando.."
 }
 
 if (codigodeChat == 8 ){
@@ -46,7 +44,7 @@ if (codigodeChat == 9){
     PrimerDia(true)
 }
 if ( codigodeChat >= 999){
-    $("#cajadeTexto").text  ("  alex ha perecido por falta de amor, por que no quiso cuidar de el ?  ")
+    cajadeTexto.textContent = "  alex ha perecido por falta de amor, por que no quiso cuidar de el ?  "
     mathF ()
  }
 }
